@@ -1,7 +1,6 @@
-
 <div align="center">
 
-# 🔐nbsp;DTZnbsp;Keynbsp;Generatenbsp
+# 🔐 DTZ Key Generate
 
 **Công cụ web nhỏ gọn, hiện đại để tạo và kiểm tra key kích hoạt dựa trên thuật toán HMAC-SHA256.**  
 *Chạy hoàn toàn trên trình duyệt • Chỉ 1 file HTML duy nhất • Không cần cài đặt • Không cần Server*
@@ -172,4 +171,4 @@ Nếu công cụ này giúp ích cho công việc và dự án của bạn, hãy
 Phát hành dưới giấy phép **[MIT License](LICENSE)**.  
 Developed with ❤️ by **[hhd-z (Kriz Neo)](https://github.com/hhd-z)**
 
-</div>
+</div
