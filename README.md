@@ -1,18 +1,16 @@
 <div align="center">
 
-# 🔐 DTZ Key Generate
+## 🔐 DTZ&nbsp;Key&nbsp;Generate
 
-**Công cụ web nhỏ gọn, hiện đại để tạo và kiểm tra key kích hoạt dựa trên thuật toán HMAC-SHA256.**  
-*Chạy hoàn toàn trên trình duyệt • Chỉ 1 file HTML duy nhất • Không cần cài đặt • Không cần Server*
+**Công cụ web nhỏ gọn để tạo & kiểm tra key kích hoạt chuẩn HMAC-SHA256.**  
+*100% Client-side • 1 File HTML • Không cần cài đặt • Không cần Server*
 
-[![Live Demo](https://img.shields.io/badge/🚀_LIVE_DEMO-TRẢI_NGHIỆM_NGAY-2ea44f?style=for-the-badge)](https://hhd-z.github.io/KeyGen/)
-[![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-181717?style=for-the-badge&logo=github)](https://hhd-z.github.io/KeyGen/)
-[![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-007ec6?style=for-the-badge)](#)
-[![License: MIT](https://img.shields.io/badge/License-MIT-f1c40f?style=for-the-badge)](LICENSE)
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Mở_Web_Ngay-2ea44f?style=flat-square)](https://hhd-z.github.io/KeyGen/)
+[![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub_Pages-181717?style=flat-square&logo=github)](https://hhd-z.github.io/KeyGen/)
+[![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-007ec6?style=flat-square)](#)
+[![License: MIT](https://img.shields.io/badge/License-MIT-f1c40f?style=flat-square)](LICENSE)
 
-<br />
-
-🌐 **Link truy cập chính thức:** [**https://hhd-z.github.io/KeyGen/**](https://hhd-z.github.io/KeyGen/)
+🌐 **Web chính thức:** [**hhd-z.github.io/KeyGen**](https://hhd-z.github.io/KeyGen/)
 
 <!-- Sếp có thể bỏ comment dòng dưới nếu muốn chèn ảnh chụp màn hình giao diện web nhé -->
 <!-- ![Preview Screenshot](docs/screenshot.png) -->
@@ -171,4 +169,4 @@ Nếu công cụ này giúp ích cho công việc và dự án của bạn, hãy
 Phát hành dưới giấy phép **[MIT License](LICENSE)**.  
 Developed with ❤️ by **[hhd-z (Kriz Neo)](https://github.com/hhd-z)**
 
-</div
+</div>
