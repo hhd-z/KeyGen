@@ -161,8 +161,11 @@ Do đặc thù là ứng dụng tĩnh chạy 100% phía trình duyệt (Client-s
 
 ## ☕ Ủng hộ nhà phát triển (Donate)
 
-Nếu công cụ này giúp ích cho công việc và dự án của bạn, hãy tiếp thêm động lực cho mình.
+Nếu công cụ này giúp ích cho công việc và dự án của bạn, hãy tiếp thêm động lực cho mình bằng cách nhấn **"Ủng hộ"** ở góc trên bên phải [trang web](https://hhd-z.github.io/KeyGen/) .
+<div align="center">
 
+ **Cũng có thể quét mã QR bên dưới để**<br />
+**👇&nbsp;donate&nbsp;cho&nbsp;mình&nbsp;nhé&nbsp;👇**
 ![QR Donate](./donate.png)
 
 ---
