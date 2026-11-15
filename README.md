@@ -10,7 +10,8 @@
 [![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-007ec6?style=flat-square)](#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-f1c40f?style=flat-square)](LICENSE)
 
-🌐 **Web chính thức:** [**hhd-z.github.io/KeyGen**](https://hhd-z.github.io/KeyGen/)
+🌐 **Web chính thức:** 
+[**hhd-z.github.io/KeyGen**](https://hhd-z.github.io/KeyGen/)
 
 <!-- Sếp có thể bỏ comment dòng dưới nếu muốn chèn ảnh chụp màn hình giao diện web nhé -->
 <!-- ![Preview Screenshot](docs/screenshot.png) -->
