@@ -1,135 +1,175 @@
-# DTZ Key Generate
 
-Công cụ web nhỏ gọn để **tạo và kiểm tra key kích hoạt**. Chạy hoàn toàn trên trình duyệt, chỉ một file HTML, không cần cài đặt, không cần server.
+<div align="center">
 
-![GitHub Pages](https://img.shields.io/badge/deploy-GitHub%20Pages-2ea44f)
-![No dependencies](https://img.shields.io/badge/dependencies-none-blue)
-![License](https://img.shields.io/badge/license-MIT-lightgrey)
+# 🔐 DTZ Key Generate
 
-**Demo:** https://TEN-GITHUB.github.io/TEN-REPO/
+**Công cụ web nhỏ gọn, hiện đại để tạo và kiểm tra key kích hoạt dựa trên thuật toán HMAC-SHA256.**  
+*Chạy hoàn toàn trên trình duyệt • Chỉ 1 file HTML duy nhất • Không cần cài đặt • Không cần Server*
 
-<!-- Thay TEN-GITHUB và TEN-REPO bằng tên tài khoản và tên repo của bạn.
-     Nên thêm ảnh chụp màn hình: ![Ảnh chụp màn hình](docs/screenshot.png) -->
+[![Live Demo](https://img.shields.io/badge/🚀_LIVE_DEMO-TRẢI_NGHIỆM_NGAY-2ea44f?style=for-the-badge)](https://hhd-z.github.io/KeyGen/)
+[![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-181717?style=for-the-badge&logo=github)](https://hhd-z.github.io/KeyGen/)
+[![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-007ec6?style=for-the-badge)](#)
+[![License: MIT](https://img.shields.io/badge/License-MIT-f1c40f?style=for-the-badge)](LICENSE)
+
+<br />
+
+🌐 **Link truy cập chính thức:** [**https://hhd-z.github.io/KeyGen/**](https://hhd-z.github.io/KeyGen/)
+
+<!-- Sếp có thể bỏ comment dòng dưới nếu muốn chèn ảnh chụp màn hình giao diện web nhé -->
+<!-- ![Preview Screenshot](docs/screenshot.png) -->
+
+</div>
 
 ---
 
-## Tính năng
+## ✨ Tính năng nổi bật
 
-- **Tạo một key**: sinh UID ngẫu nhiên và key đi kèm chỉ bằng một lần bấm.
-- **Tạo theo UID**: nhập UID của thiết bị, nhận key chỉ dùng được cho đúng UID đó.
-- **Tạo hàng loạt**: từ 1 đến 5000 key mỗi lần, có ô lọc, sao chép nhanh và xuất file TXT, CSV hoặc JSON.
-- **Kiểm tra key**: nhập UID và key để biết key có hợp lệ hay không.
-- **Tiền tố tùy chỉnh**: đổi tiền tố key tối đa 5 ký tự (chữ A-Z, số 0-9). Mặc định là `DTZ`.
-- **Mở app bằng deep link**: nút "Mở app" gọi thẳng `digitalvolume://activate?key=...&uid=...`.
-- **Giao diện sáng và tối**, dùng tốt trên điện thoại.
-- **Riêng tư**: toàn bộ xử lý nằm trong trình duyệt, không gửi dữ liệu đi đâu.
+- ⚡ **Tạo một key nhanh**: Sinh ngẫu nhiên `UID` và `Key` tương ứng chỉ với 1 cú click.
+- 🎯 **Tạo key theo UID**: Nhập `UID` của thiết bị cụ thể, nhận key khóa cứng chỉ dùng được cho đúng `UID` đó.
+- 📦 **Tạo hàng loạt (Bulk Generation)**: Hỗ trợ tạo từ `1` đến `5.000` key mỗi lần. Tích hợp sẵn bộ lọc tìm kiếm, sao chép nhanh và xuất dữ liệu ra các định dạng `.TXT`, `.CSV` hoặc `.JSON`.
+- 🔍 **Kiểm tra key (Validator)**: Xác thực nhanh cặp `UID` và `Key` xem có hợp lệ và khớp nhau hay không.
+- 🏷️ **Tiền tố tùy chỉnh (Custom Prefix)**: Tùy biến tiền tố đầu của key tối đa 5 ký tự (`A-Z`, `0-9`, mặc định là `DTZ`) và tự động lưu vào bộ nhớ trình duyệt cho lần dùng sau.
+- 📱 **Tích hợp Deep Link**: Nút **"Mở app"** gọi trực tiếp giao thức `digitalvolume://activate?key=...&uid=...` để kích hoạt nhanh ứng dụng.
+- 🌗 **Giao diện Hiện đại (Dark/Light Mode)**: Tự động tối ưu hiển thị, tương thích mượt mà trên cả máy tính lẫn điện thoại.
+- 🛡️ **Bảo mật & Riêng tư tuyệt đối**: 100% logic xử lý nằm tại trình duyệt người dùng (Client-side), cam kết không thu thập hay gửi dữ liệu đi bất kỳ đâu.
 
-## Cách dùng
+---
 
-| Tab | Việc làm |
-| --- | --- |
-| Một key | Bấm **Tạo key**, sau đó sao chép key, sao chép UID hoặc mở app. |
-| Theo UID | Nhập UID rồi bấm **Tạo key** để lấy key khớp UID đó. |
-| Hàng loạt | Nhập số lượng (hoặc chọn nhanh 10, 50, 100, 500, 1000), bấm **Tạo key**, lọc và tải file. |
-| Kiểm tra | Nhập UID và key, bấm **Kiểm tra**. |
+## 📖 Hướng dẫn sử dụng
 
-Tiền tố nằm ở ô trên cùng và áp dụng cho mọi tab. Để trống ô này thì dùng `DTZ`. Tiền tố được lưu lại trong trình duyệt cho lần sau.
+💡 *Mẹo: Ô **Tiền tố (Prefix)** nằm ở thanh trên cùng sẽ áp dụng chung cho toàn bộ các tab. Nếu bỏ trống, hệ thống mặc định dùng `DTZ`.*
 
-## Định dạng key
+| Chế độ (Tab) | Thao tác thực hiện |
+| :--- | :--- |
+| **1️⃣ Một key** | Bấm **Tạo key** ➡️ Sao chép Key, sao chép UID hoặc bấm **Mở app** để kích hoạt trực tiếp. |
+| **2️⃣ Theo UID** | Nhập `UID` thiết bị cần cấp phép ➡️ Bấm **Tạo key** để nhận mã gắn kết riêng với UID đó. |
+| **3️⃣ Hàng loạt** | Nhập số lượng (hoặc chọn mốc nhanh `10`, `50`, `100`, `500`, `1000`) ➡️ Bấm **Tạo key** ➡️ Lọc và tải file về máy. |
+| **4️⃣ Kiểm tra** | Nhập cặp `UID` và `Key` cần đối chiếu ➡️ Bấm **Kiểm tra** để xem trạng thái hợp lệ. |
 
-```
+---
+
+## 🧬 Cấu trúc & Thuật toán Key
+
+Mỗi mã kích hoạt được sinh ra tuân theo định dạng chuẩn:
+
+~~~text
 DTZ-ABCD-EFGH-U9PC-87C5
- │    │    │    └──┴── checksum (8 ký tự)
- │    └────┴────────── 2 đoạn ngẫu nhiên (4 ký tự mỗi đoạn)
- └─────────────────── tiền tố (1 đến 5 ký tự)
-```
+ │    │    │    └──┴── Checksum xác thực (8 ký tự)
+ │    └────┴────────── 2 cụm ký tự ngẫu nhiên (4 ký tự / cụm)
+ └──────────────────── Tiền tố tùy chỉnh (1 đến 5 ký tự)
+~~~
 
-- Bảng ký tự: `ABCDEFGHJKLMNPQRSTUVWXYZ23456789` (đã bỏ `0`, `O`, `1`, `I` để khỏi nhầm khi đọc).
-- Checksum là **HMAC-SHA256**, lấy 8 byte đầu, mỗi byte `& 31` rồi tra vào bảng ký tự ở trên.
-- Thông điệp được ký: `DTZ_V2|<tiền tố>|<đoạn 1>|<đoạn 2>|<UID>`
-- Khóa: hằng số `DTZ_PUBLIC_V2` (xem phần [Lưu ý bảo mật](#lưu-ý-bảo-mật)).
+### Nguyên lý hoạt động:
+- **Bảng chữ cái (Alphabet)**: `ABCDEFGHJKLMNPQRSTUVWXYZ23456789` *(Đã loại bỏ `0`, `O`, `1`, `I` để tránh nhầm lẫn thị giác khi người dùng nhập tay)*.
+- **Thuật toán băm**: Sử dụng **HMAC-SHA256**, trích xuất 8 byte đầu tiên, mỗi byte thực hiện phép toán `& 31` để ánh xạ sang bảng chữ cái trên.
+- **Chuỗi thông điệp ký (Payload)**: `DTZ_V2|<Tiền tố>|<Đoạn 1>|<Đoạn 2>|<UID>`
+- **Khóa công khai (Secret Key)**: Hằng số `DTZ_PUBLIC_V2` *(Xem thêm tại mục [Lưu ý bảo mật](#-lưu-ý-bảo-mật-quan-trọng))*.
 
-Do thông điệp có cả tiền tố và UID, một key chỉ hợp lệ với đúng tiền tố và đúng UID đã dùng để tạo ra nó.
+> 📌 **Cơ chế ràng buộc**: Vì chuỗi thông điệp chứa cả **Tiền tố** và **UID**, một key chỉ được coi là hợp lệ khi đi kèm đúng Tiền tố và đúng UID lúc khởi tạo.
 
-## Kiểm tra key trong app của bạn
+---
 
-Làm lại đúng công thức trên ở phía app. Ví dụ bằng Python:
+## 💻 Tích hợp kiểm tra Key vào App của bạn
 
-```python
-import hmac, hashlib
+Để xác thực key trong ứng dụng đích, bạn chỉ cần tái tạo lại công thức băm ở trên. Dưới đây là mã nguồn mẫu bằng **Python**:
+
+~~~python
+import hmac
+import hashlib
 
 SECRET = b"DTZ_PUBLIC_V2"
 ALPHABET = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"
 
-def checksum(prefix, a, b, uid):
-    msg = f"DTZ_V2|{prefix}|{a}|{b}|{uid}".encode()
+def generate_checksum(prefix: str, part_a: str, part_b: str, uid: str) -> str:
+    msg = f"DTZ_V2|{prefix}|{part_a}|{part_b}|{uid}".encode("utf-8")
     digest = hmac.new(SECRET, msg, hashlib.sha256).digest()
-    return "".join(ALPHABET[x & 31] for x in digest[:8])
+    return "".join(ALPHABET[byte & 31] for byte in digest[:8])
 
-def verify(key, uid):
-    parts = key.upper().split("-")
+def verify_key(key: str, uid: str) -> bool:
+    parts = key.strip().upper().split("-")
     if len(parts) != 5:
         return False
-    prefix, a, b, t1, t2 = parts
-    return checksum(prefix, a, b, uid) == t1 + t2
-```
+    prefix, part_a, part_b, chk1, chk2 = parts
+    return generate_checksum(prefix, part_a, part_b, uid) == (chk1 + chk2)
+~~~
 
-**Bộ kiểm thử** để đối chiếu khi làm ở ngôn ngữ khác:
+### 🧪 Bộ dữ liệu kiểm thử (Test Vector)
+Dùng bảng dưới đây để đối chiếu kết quả khi bạn viết hàm kiểm tra bằng ngôn ngữ khác (Java, Kotlin, C#, JS, C++...):
 
-| Tiền tố | Đoạn 1 | Đoạn 2 | UID | Checksum |
-| --- | --- | --- | --- | --- |
-| `DTZ` | `ABCD` | `EFGH` | `uid1` | `U9PC87C5` |
+| Tiền tố | Đoạn 1 | Đoạn 2 | UID | Checksum đầu ra | Key hoàn chỉnh hợp lệ |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| `DTZ` | `ABCD` | `EFGH` | `uid1` | `U9PC87C5` | `DTZ-ABCD-EFGH-U9PC-87C5` |
 
-Tức là key `DTZ-ABCD-EFGH-U9PC-87C5` hợp lệ với UID `uid1`.
+---
 
-## Triển khai lên GitHub Pages
+## ⚙️ Tùy chỉnh & Triển khai
 
-1. Tạo repo mới trên GitHub và upload các file trong thư mục dự án (xem [Cấu trúc thư mục](#cấu-trúc-thư-mục)).
-2. Vào **Settings → Pages**.
-3. Ở mục **Build and deployment**, chọn **Deploy from a branch**, nhánh `main`, thư mục `/ (root)`, rồi **Save**.
-4. Sau khoảng một phút, trang chạy tại `https://<tên-github>.github.io/<tên-repo>/`.
+<details>
+<summary><b>🛠️ Xem hướng dẫn tùy chỉnh thông số mã nguồn (Click để mở)</b></summary>
+<br />
 
-Có thể chạy thử ngay trên máy: mở `index.html` bằng trình duyệt.
+Các hằng số cấu hình cốt lõi nằm ngay đầu thẻ `<script>` trong file `index.html`:
 
-## Tùy chỉnh
+~~~javascript
+const SECRET = "DTZ_PUBLIC_V2",
+      SCHEME = "digitalvolume://activate",
+      DEF    = "DTZ",
+      MAXP   = 5;
+~~~
 
-Các giá trị cấu hình nằm ở đầu phần `<script>` trong `index.html`:
+| Hằng số | Ý nghĩa cấu hình |
+| :--- | :--- |
+| `SECRET` | Khóa bí mật dùng để tính toán Checksum. Ứng dụng của bạn phải khai báo khớp 100% giá trị này. |
+| `SCHEME` | Đường dẫn Deep Link kích hoạt khi người dùng bấm nút **Mở app**. |
+| `DEF` | Tiền tố mặc định khi ô nhập liệu để trống. |
+| `MAXP` | Độ dài ký tự tối đa cho phép của tiền tố. |
 
-```js
-const SECRET="DTZ_PUBLIC_V2",SCHEME="digitalvolume://activate",DEF="DTZ",MAXP=5;
-```
+🔴 **Cảnh báo**: Việc thay đổi giá trị `SECRET` hoặc cấu trúc chuỗi băm sẽ làm **vô hiệu hóa toàn bộ các key đã phát hành trước đó**, đồng thời bạn phải cập nhật lại thuật toán tương ứng trên App.
+</details>
 
-| Hằng số | Ý nghĩa |
-| --- | --- |
-| `SECRET` | Khóa dùng để tính checksum. App phải dùng đúng giá trị này. |
-| `SCHEME` | Địa chỉ deep link của nút **Mở app**. |
-| `DEF` | Tiền tố mặc định khi người dùng để trống. |
-| `MAXP` | Số ký tự tối đa của tiền tố. |
+<details>
+<summary><b>🚀 Xem hướng dẫn tự triển khai lên GitHub Pages (Click để mở)</b></summary>
+<br />
 
-Đổi `SECRET` hoặc đổi công thức đồng nghĩa với việc mọi key đã tạo trước đó không còn hợp lệ, và app cũng phải sửa theo.
+1. Fork hoặc tải toàn bộ file trong kho lưu trữ này lên Repository GitHub của bạn.
+2. Truy cập vào mục **Settings** ➡️ **Pages** trên thanh công cụ của Repo.
+3. Tại phần **Build and deployment**, chọn nguồn **Deploy from a branch** ➡️ Nhánh `main` ➡️ Thư mục `/ (root)` ➡️ Bấm **Save**.
+4. Đợi khoảng 1 phút để hệ thống khởi tạo, trang web của bạn sẽ sẵn sàng hoạt động! *(Hoặc bạn có thể tải về máy và mở trực tiếp file `index.html` bằng trình duyệt bất kỳ)*.
+</details>
 
-## Cấu trúc thư mục
+---
 
-```
-.
-├── index.html     # toàn bộ giao diện và logic
-├── donate.png     # mã QR ủng hộ (hiện trong nút "Ủng hộ dev")
-├── README.md
-└── LICENSE
-```
+## 📂 Cấu trúc thư mục
 
-## Lưu ý bảo mật
+~~~text
+KeyGen/
+├── 📄 index.html     # Toàn bộ giao diện (UI) và mã nguồn xử lý (Logic)
+├── 🖼️ donate.png     # Mã QR ủng hộ nhà phát triển (Hiển thị trong modal "Ủng hộ dev")
+├── 📘 README.md      # Tài liệu hướng dẫn sử dụng chi tiết
+└── ⚖️ LICENSE        # Giấy phép nguồn mở MIT
+~~~
 
-Trang này chạy hoàn toàn phía trình duyệt, nên `SECRET` nằm ngay trong mã nguồn và ai cũng đọc được. Vì vậy:
+---
 
-- Checksum ở đây chỉ có tác dụng **chống gõ nhầm** và **gắn key với một UID cụ thể**. Nó **không** ngăn người khác tự tạo key hợp lệ.
-- Phù hợp cho app miễn phí, bản thử nghiệm, dự án cá nhân hoặc mục đích học tập.
-- Nếu key dùng để giới hạn tính năng trả phí, hãy tạo và kiểm tra key ở phía server, với khóa bí mật không bao giờ đưa ra trình duyệt.
+## 🔴 Lưu ý bảo mật quan trọng
 
-## Ủng hộ
+Do đặc thù là ứng dụng tĩnh chạy 100% phía trình duyệt (Client-side), hằng số `SECRET` nằm trực tiếp trong mã nguồn JavaScript và bất kỳ ai có kiến thức kỹ thuật đều có thể đọc được. Vì vậy:
 
-Nếu công cụ hữu ích với bạn, có thể ủng hộ dev bằng nút **Ủng hộ dev** ở góc trên bên phải của trang (hiện mã QR từ file `donate.png`). Cảm ơn bạn rất nhiều.
+* ❗ **Mục đích của Checksum**: Chỉ có tác dụng **chống người dùng gõ nhầm key** và **ràng buộc key với một UID thiết bị cụ thể**. Cơ chế này **không** ngăn chặn được việc dịch ngược mã nguồn để tự tạo key.
+* ✅ **Trường hợp nên dùng**: Rất phù hợp cho các ứng dụng miễn phí, bản Beta thử nghiệm, công cụ nội bộ, dự án cá nhân hoặc mục đích học tập.
+* 🔒 **Đối với ứng dụng thương mại / trả phí**: Hãy chuyển toàn bộ quá trình tạo và xác thực key lên máy chủ riêng (Server-side API) hoặc sử dụng chữ ký số bất đối xứng (RSA / Ed25519) để bảo vệ khóa bí mật tuyệt đối.
 
-## Giấy phép
+---
 
-Phát hành theo giấy phép [MIT](LICENSE).
+## ☕ Ủng hộ nhà phát triển (Donate)
+
+Nếu công cụ này giúp ích cho công việc và dự án của bạn, hãy tiếp thêm động lực cho mình bằng cách bấm vào nút **"Ủng hộ dev"** ở góc trên bên phải của [trang web](https://hhd-z.github.io/KeyGen/) (mã QR từ file `donate.png`). Cảm ơn sự ủng hộ của bạn rất nhiều! ❤️
+
+---
+
+<div align="center">
+
+Phát hành dưới giấy phép **[MIT License](LICENSE)**.  
+Developed with ❤️ by **[hhd-z (Kriz Neo)](https://github.com/hhd-z)**
+
+</div>
